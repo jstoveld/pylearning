@@ -7,13 +7,14 @@ def guessing_game():
     too_low = -1
 
     while True:
-        guess = int(input('What is your guess? '))
-        if ValueError:
-            guess = int(input('Guess must be a positive integer? '))
+        try:
+            guess = int(input('What is your guess? '))
+            if ValueError:
+                guess = int(input('Guess must be a positive integer? '))
+   
+            if guess < too_high and guess > too_low:
+                continue
 
-            
-        if guess < too_high and guess > too_low:
-            continue
 
         if guess is answer:
             print(f'Right!  The answer is {guess}')
